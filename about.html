@@ -1,50 +1,87 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Project Allies — About</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header class="site-header">
-      <h1>Project Allies</h1>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="media.html">Media</a>
-        <a href="examples.html">Examples</a>
-        <a href="about.html" aria-current="page">About</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <title>Project Allies — About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Project Allies</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="media.html">Media</a>
+      <a href="examples.html">Examples</a>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+  </header>
 
-    <main class="wrap">
-      <section>
-        <h2>About This Project</h2>
-        <p>
-          This site is a lightweight HTML/CSS version of my “Project Allies” idea. It focuses on
-          media demonstration and brief explanations without any calculators.
-        </p>
-      </section>
+  <main>
+    <h2>About This Project</h2>
+    <p>
+      <strong>Project Allies</strong> is a plain HTML + CSS site that introduces core
+      <abbr title="Computer Science">CS</abbr> concepts with short explanations and media.
+      It avoids heavy frameworks and keeps the design black and white.
+    </p>
 
-      <section class="credits">
-        <h3>Technologies & Semantics Used</h3>
-        <ul>
-          <li><code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;embed&gt;</code> for rich media.</li>
-          <li><code>&lt;abbr&gt;</code>, <code>&lt;details&gt;</code>, <code>&lt;cite&gt;</code> for semantic clarity.</li>
-        </ul>
-      </section>
+    <h2>Goals</h2>
+    <ul>
+      <li>Be simple and readable.</li>
+      <li>Demonstrate media tags: <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;embed&gt;</code>.</li>
+      <li>Use semantic tags: <code>&lt;abbr&gt;</code>, <code>&lt;details&gt;</code>, <code>&lt;cite&gt;</code>.</li>
+      <li>Follow the “4 HTML + 1 CSS” structure.</li>
+    </ul>
 
-      <section class="sources">
-        <h3>References</h3>
-        <p>
-          Reading list includes <cite>Computer Systems: A Programmer’s Perspective</cite> and
-          <cite>Code: The Hidden Language of Computer Hardware and Software</cite>.
-        </p>
-      </section>
-    </main>
+    <h2>How It’s Built</h2>
+    <table aria-label="Build summary">
+      <thead>
+        <tr><th>File</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>index.html</td><td>Welcome page and quick navigation.</td></tr>
+        <tr><td>media.html</td><td>Video and audio demonstrations.</td></tr>
+        <tr><td>examples.html</td><td>Interactive details and an embedded PDF.</td></tr>
+        <tr><td>about.html</td><td>Project rationale, attributions, and FAQ.</td></tr>
+        <tr><td>styles.css</td><td>Minimal black-and-white styling.</td></tr>
+      </tbody>
+    </table>
 
-    <footer class="site-footer">
-      <p>© 2025 Project Allies</p>
-    </footer>
-  </body>
+    <h2>Attributions</h2>
+    <p>
+      Reading that influenced this site:
+      <cite>Computer Systems: A Programmer’s Perspective</cite>,
+      <cite>Code: The Hidden Language of Computer Hardware and Software</cite>.
+    </p>
+
+    <h2>FAQ</h2>
+    <!-- <details>: simple Q&A without JS -->
+    <details class="details-card">
+      <summary>Why black and white?</summary>
+      <p>To keep focus on content, minimize distractions, and meet project constraints.</p>
+    </details>
+    <details class="details-card">
+      <summary>Can I add more topics?</summary>
+      <p>Yes—add more <code>&lt;details&gt;</code> blocks in <code>examples.html</code> and update the cheat sheet.</p>
+    </details>
+    <details class="details-card">
+      <summary>Where are the media files stored?</summary>
+      <p>In the <code>assets/</code> folder (MP4, MP3/OGG, and PDF).</p>
+    </details>
+
+    <h2>Contact & License</h2>
+    <p>
+      You can reuse this structure for study purposes. If you share it, please credit with a
+      short note like “Based on <cite>Project Allies</cite>.”
+    </p>
+
+    <blockquote>
+      “Simplicity is the soul of efficiency.” — <cite>Austin Freeman</cite>
+    </blockquote>
+  </main>
+
+  <footer>
+    <p>© 2025 Project Allies</p>
+  </footer>
+</body>
 </html>

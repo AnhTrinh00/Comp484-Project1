@@ -1,65 +1,110 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Project Allies — Examples</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header class="site-header">
-      <h1>Project Allies</h1>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="media.html">Media</a>
-        <a href="examples.html" aria-current="page">Examples</a>
-        <a href="about.html">About</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <title>Project Allies — Examples</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Project Allies</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="media.html">Media</a>
+      <a href="examples.html" aria-current="page">Examples</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
 
-    <main class="wrap">
-      <h2>Interactive Examples</h2>
+  <main>
+    <h2>Interactive Examples</h2>
 
-      <!-- UNIQUE INTERACTIVE ELEMENT -->
-      <!-- <details>: creates an expandable disclosure UI without JS. -->
+    <!-- Quick concept cards -->
+    <div class="details-grid">
+      <!-- <details>: disclosure widget without JS -->
       <details class="details-card" open>
-        <summary>What is an <abbr title="Exclusive OR">XOR</abbr> operation?</summary>
+        <summary>What is <abbr title="Exclusive OR">XOR</abbr>?</summary>
+        <p>XOR outputs 1 only when inputs differ (01 or 10). Useful for parity checks.</p>
+        <table aria-label="XOR truth table">
+          <thead>
+            <tr><th>A</th><th>B</th><th>A ⊕ B</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>0</td><td>1</td><td>1</td></tr>
+            <tr><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </details>
+
+      <details class="details-card">
+        <summary>Boolean Laws (mini)</summary>
         <p>
-          XOR outputs 1 only when the inputs differ (01 or 10). It’s widely used in parity checks
-          and cryptography primitives.
+          <strong>Identity:</strong> A ∧ 1 = A, A ∨ 0 = A<br/>
+          <strong>Null:</strong> A ∧ 0 = 0, A ∨ 1 = 1<br/>
+          <strong>Idempotent:</strong> A ∧ A = A, A ∨ A = A<br/>
+          <strong>Inverse:</strong> A ∧ ¬A = 0, A ∨ ¬A = 1
         </p>
       </details>
 
       <details class="details-card">
-        <summary>What’s the difference between <abbr title="Random Access Memory">RAM</abbr> and Storage?</summary>
+        <summary>Bitwise vs Logical</summary>
         <p>
-          RAM is volatile working memory; storage (like SSD) persists data across power cycles.
+          <abbr title="Central Processing Unit">CPU</abbr> bitwise ops (AND, OR, XOR, NOT) operate on each bit independently.
+          Logical ops evaluate true/false for whole expressions.
         </p>
+        <pre aria-label="bitwise example">
+0b1010 AND 0b1100 = 0b1000
+0b1010 XOR 0b1100 = 0b0110
+        </pre>
       </details>
 
-      <hr />
+      <details class="details-card">
+        <summary>Base Conversion (Decimal → Binary)</summary>
+        <p>Repeated division by 2; collect remainders (bottom-up):</p>
+        <pre aria-label="decimal to binary steps">
+13 / 2 = 6 r1
+6 / 2  = 3 r0
+3 / 2  = 1 r1
+1 / 2  = 0 r1
+=> 13₁₀ = 1101₂
+        </pre>
+      </details>
+    </div>
 
-      <section id="cheatsheet">
-        <h3>Cheat Sheet (Embedded PDF)</h3>
-        <!-- UNIQUE MEDIA ELEMENT #3 -->
-        <!-- <embed>: embeds a PDF so the user can read it inline (type is important). -->
-        <div class="embed-frame" role="region" aria-label="Number systems cheat sheet">
-          <embed
-            src="assets/number-systems-cheatsheet.pdf"
-            type="application/pdf"
-            width="100%"
-            height="600"
-          />
-        </div>
-        <p class="caption">
-          Source notes adapted from
-          <cite>Computer Organization Notes, 2nd ed.</cite>
-        </p>
-      </section>
-    </main>
+    <h2 id="cheatsheet">Cheat Sheet (Embedded PDF)</h2>
+    <!-- <embed>: inline PDF viewer -->
+    <div class="embed-frame" role="region" aria-label="Number systems cheat sheet">
+      <embed
+        src="assets/number-systems-cheatsheet.pdf"
+        type="application/pdf"
+        width="100%"
+        height="600"
+      />
+    </div>
+    <p class="caption">
+      Source adapted from <cite>Computer Organization Notes</cite>.
+    </p>
 
-    <footer class="site-footer">
-      <p>© 2025 Project Allies</p>
-    </footer>
-  </body>
+    <h2>Study Tips</h2>
+    <ol>
+      <li>Memorize powers of two up to at least 2<sup>10</sup> (1024).</li>
+      <li>Group binary digits in 3s (octal) or 4s (hex) for quick conversion.</li>
+      <li>Write out small truth tables to debug logic.</li>
+    </ol>
+
+    <h2>Glossary</h2>
+    <ul>
+      <li><abbr title="Random Access Memory">RAM</abbr> — volatile working memory.</li>
+      <li><abbr title="Arithmetic Logic Unit">ALU</abbr> — performs arithmetic/logic ops.</li>
+      <li><abbr title="Most Significant Bit">MSB</abbr> / <abbr title="Least Significant Bit">LSB</abbr> — bit positions.</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 Project Allies</p>
+  </footer>
+</body>
 </html>
