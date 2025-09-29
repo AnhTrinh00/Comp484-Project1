@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project Allies — Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Project Allies</h1>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="media.html">Media</a>
+        <a href="examples.html" aria-current="page">Examples</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <h2>Interactive Examples</h2>
+
+      <!-- UNIQUE INTERACTIVE ELEMENT -->
+      <!-- <details>: creates an expandable disclosure UI without JS. -->
+      <details class="details-card" open>
+        <summary>What is an <abbr title="Exclusive OR">XOR</abbr> operation?</summary>
+        <p>
+          XOR outputs 1 only when the inputs differ (01 or 10). It’s widely used in parity checks
+          and cryptography primitives.
+        </p>
+      </details>
+
+      <details class="details-card">
+        <summary>What’s the difference between <abbr title="Random Access Memory">RAM</abbr> and Storage?</summary>
+        <p>
+          RAM is volatile working memory; storage (like SSD) persists data across power cycles.
+        </p>
+      </details>
+
+      <hr />
+
+      <section id="cheatsheet">
+        <h3>Cheat Sheet (Embedded PDF)</h3>
+        <!-- UNIQUE MEDIA ELEMENT #3 -->
+        <!-- <embed>: embeds a PDF so the user can read it inline (type is important). -->
+        <div class="embed-frame" role="region" aria-label="Number systems cheat sheet">
+          <embed
+            src="assets/number-systems-cheatsheet.pdf"
+            type="application/pdf"
+            width="100%"
+            height="600"
+          />
+        </div>
+        <p class="caption">
+          Source notes adapted from
+          <cite>Computer Organization Notes, 2nd ed.</cite>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 Project Allies</p>
+    </footer>
+  </body>
+</html>

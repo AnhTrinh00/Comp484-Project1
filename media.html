@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project Allies — Media</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Project Allies</h1>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="media.html" aria-current="page">Media</a>
+        <a href="examples.html">Examples</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <h2>Media Demonstrations</h2>
+
+      <section class="media-block">
+        <h3>Number Systems — Quick Visual</h3>
+        <!-- UNIQUE MEDIA ELEMENT #1 -->
+        <!-- <video>: used to present a short conceptual demo.
+             'controls' gives playback UI; 'poster' provides a placeholder image. -->
+        <video controls poster="assets/poster-number-systems.png" width="720">
+          <source src="assets/number-systems-demo.mp4" type="video/mp4" />
+          <p>Your browser doesn’t support HTML5 video. Here’s a
+             <a href="assets/number-systems-demo.mp4">direct link</a>.</p>
+        </video>
+      </section>
+
+      <section class="media-block">
+        <h3>Audio Explainer — Binary vs Decimal</h3>
+        <!-- UNIQUE MEDIA ELEMENT #2 -->
+        <!-- <audio>: used to deliver a short narrated explanation. -->
+        <audio controls>
+          <source src="assets/binary-vs-decimal.ogg" type="audio/ogg" />
+          <source src="assets/binary-vs-decimal.mp3" type="audio/mpeg" />
+          Your browser doesn’t support the audio element.
+        </audio>
+        <p class="caption">
+          Narration inspired by a CS101 lecture —
+          <!-- UNIQUE SEMANTIC ELEMENT #2 -->
+          <!-- <cite>: marks the title/source of a referenced work. -->
+          <cite>Introduction to Computer Systems</cite>.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 Project Allies</p>
+    </footer>
+  </body>
+</html>
