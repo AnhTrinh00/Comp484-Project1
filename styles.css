@@ -1,4 +1,11 @@
-
+:root {
+  --bg: #0f172a;
+  --fg: #e2e8f0;
+  --muted: #94a3b8;
+  --card: #111827;
+  --accent: #22d3ee;
+  --accent-ink: #062529;
+}
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
