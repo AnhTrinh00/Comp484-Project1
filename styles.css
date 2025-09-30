@@ -124,3 +124,31 @@ td, th {
   padding: 6px;
   text-align: left;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 0;
+  background: #fff;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
